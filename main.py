@@ -23,13 +23,11 @@ def on_message(wsapp, data):
     command = data.get('command')
     try:
         if command == 'CEC_ON':
-            if not tv.is_on():
-                print("Turn TV ON")
-                tv.power_on()
+            print("Turn TV ON")
+            tv.power_on()
         elif command == 'CEC_STANDBY':
-            if tv.is_on():
-                print("Turn TV OFF")
-                tv.standby()
+            print("Turn TV OFF")
+            tv.standby()
     except Exception as e:
         print(e)
 
