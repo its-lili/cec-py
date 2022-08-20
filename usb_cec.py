@@ -1,12 +1,8 @@
 #!/usr/bin/python
 
 import cec
-import serial, sys
-import serial.tools.list_ports
-import sys
-import glob
 import serial
-
+import sys
 
 init_cec = False
 
@@ -39,12 +35,16 @@ def tv_on():
 port = "/dev/tty0"
 # port = "/dev/tty1"
 # port = "/dev/pts/1"
+if len(sys.argv) > 1:
+    port = sys.argv[1]
+
+print(f"Port: {port}")
 serial_port = serial.Serial(
     port=port,
     baudrate=9600,
-    bytesize=8,
-    timeout=2,
-    stopbits=serial.STOPBITS_ONE
+    # bytesize=8,
+    # timeout=1,
+    # stopbits=serial.STOPBITS_ONE
 )
 
 print("start serial read")
