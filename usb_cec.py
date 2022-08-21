@@ -40,7 +40,11 @@ def tv_standby():
         print(e)
 
 
-port = "/dev/tty0"
+# Use this to list all ports:
+# python -m serial.tools.miniterm
+port = "/dev/ttyAMA0"
+# port = "/dev/tty0"
+# port = "/dev/ttyACM0"
 # port = "/dev/tty1"
 # port = "/dev/pts/1"
 if len(sys.argv) > 1:
