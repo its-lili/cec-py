@@ -46,3 +46,16 @@ python usb_cec.py /dev/ttyAMA0
 # or 
 python usb_cec.py /dev/tty0
 ```
+
+### Connect PC with RPI4 for serial communication
+[USB serial PC to RPI4](https://electropeak.com/learn/raspberry-pi-serial-communication-uart-w-arduino-pc/)
+
+```shell
+sudo vi /boot/config.txt
+
+# Add the following lines to the end of the file.
+Enable UART
+enable_uart=1
+
+sudo reboot
+```
