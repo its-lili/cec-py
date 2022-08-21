@@ -32,6 +32,14 @@ def tv_on():
         print(e)
 
 
+def tv_standby():
+    print("Turn TV STANDBY")
+    try:
+        tv.standby()
+    except Exception as e:
+        print(e)
+
+
 port = "/dev/tty0"
 # port = "/dev/tty1"
 # port = "/dev/pts/1"
@@ -63,6 +71,6 @@ while True:
             if message == "TV_ON":
                 tv_on()
             if message == "TV_STANDBY":
-                tv_on()
+                tv_standby()
         except:
             pass
