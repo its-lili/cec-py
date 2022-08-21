@@ -4,7 +4,7 @@ import cec
 import serial
 import sys
 
-init_cec = False
+init_cec = True
 
 if init_cec:
     print("init cec")
@@ -61,6 +61,8 @@ while True:
             message = serial_string.decode("Ascii")
             print(message)
             if message == "TV_ON":
+                tv_on()
+            if message == "TV_STANDBY":
                 tv_on()
         except:
             pass
