@@ -78,3 +78,5 @@ while True:
                 tv_standby()
         except:
             pass
+    else:
+        print("-")
