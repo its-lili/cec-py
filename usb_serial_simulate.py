@@ -7,10 +7,10 @@ import serial
 master, slave = pty.openpty()
 port = os.ttyname(slave)
 
-port = "/dev/tty1"
+# port = "/dev/tty1"
 # port = "/dev/pts/1"
 # port = "/dev/serial0"
-# port = "/dev/ttyAMA0"
+port = "/dev/ttyAMA0"
 
 print(f"port: {port}")
 ser = serial.Serial(port)
